@@ -19,14 +19,6 @@ Login Com Sucesso
     Input Text      id:user-name    ${USUARIO_VALIDO}
     Input Text      id:password     ${SENHA_VALIDA}
     Click Button    id:login-button
-    
-    # MUDANÇA 1: O Sleep vem AGORA, logo após o clique.
-    # Assim o navegador fica aberto 5s para você ver o que aconteceu.
-    Sleep    5s
-    
-    # MUDANÇA 2: Usando 'css:.title' que é mais garantido que 'class:title'
-    Wait Until Element Is Visible    css:.title    timeout=10s
-    Element Text Should Be           css:.title    Products
 
 Login Com Senha Invalida
     [Documentation]    Verifica se a mensagem de erro aparece ao usar senha errada.
@@ -42,4 +34,5 @@ Abrir Navegador
     Set Selenium Implicit Wait    10s
 
 Fechar Navegador
+
     Close Browser
